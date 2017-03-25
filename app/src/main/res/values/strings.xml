@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Court Counter</string>
+    <string name="app_name">Football Counter</string>
+    <string name="stadium">Stadium</string>
+    <string name="date_time">Date Time</string>
+    <string name="team_a">Team A</string>
+    <string name="_0">0</string>
+    <string name="team_b">Team B</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
 </resources>

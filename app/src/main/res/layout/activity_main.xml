@@ -8,9 +8,45 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/stadium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/stadium"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+
+        <EditText
+            android:id="@+id/dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/date_time"
+            android:imeOptions="actionSend"
+            android:inputType="datetime"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
 
         <LinearLayout
             android:id="@+id/activity_main"
@@ -20,17 +56,21 @@
             android:orientation="vertical"
             tools:context="com.example.android.courtcounter.MainActivity">
 
-            <TextView
+            <EditText
                 android:id="@+id/teamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:background="@null"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
+                android:hint="@string/team_a"
+                android:imeOptions="actionSend"
+                android:inputType="text|textCapSentences"
+
                 android:padding="4dp"
-                android:text="Team A"
                 android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -41,46 +81,12 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
+                android:text="@string/_0"
+                android:textColor="#b4b6aa"
                 android:textSize="56sp" />
 
-            <Button
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:onClick="addThreeForTeamA"
-                android:text="+3 Points" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:onClick="addTwoForTeamA"
-                android:text="+2 Points" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:onClick="addOneForTeamA"
-                android:text="Free Throw" />
 
         </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/darker_gray" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -89,17 +95,20 @@
             android:orientation="vertical"
             tools:context="com.example.android.courtcounter.MainActivity">
 
-            <TextView
+            <EditText
                 android:id="@+id/teamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:background="@null"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
+                android:hint="@string/team_b"
+                android:imeOptions="actionSend"
+                android:inputType="textCapSentences|textAutoCorrect"
                 android:padding="4dp"
-                android:text="Team B"
                 android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -113,41 +122,211 @@
                 android:text="0"
                 android:textColor="#000000"
                 android:textSize="56sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:onClick="addThreeForTeamB"
-                android:text="+3 Points" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:onClick="addTwoForTeamB"
-                android:text="+2 Points" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:onClick="addOneForTeamB"
-                android:text="Free Throw" />
-
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/minus" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+
+            <TextView
+                style="@style/GameStats"
+                android:text="Goals" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:layout_height="match_parent"
+                android:text="@string/minus" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/minus" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+
+            <TextView
+                style="@style/GameStats"
+                android:text="Penalties" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:layout_height="match_parent"
+                android:text="@string/minus" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/minus" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+
+            <TextView
+                style="@style/GameStats"
+                android:text="Faults" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:layout_height="match_parent"
+                android:text="@string/minus" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/minus" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+
+            <TextView
+                style="@style/GameStats"
+                android:text="Shots" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:layout_height="match_parent"
+                android:text="@string/minus" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/minus" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+
+            <TextView
+                style="@style/GameStats"
+                android:text="Saves" />
+
+            <TextView
+                style="@style/GameStats"
+                android:text="0" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:text="@string/plus" />
+
+            <Button
+                style="@style/PlusMinusButtonStyle"
+                android:layout_height="match_parent"
+                android:text="@string/minus" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
         android:orientation="vertical">
 
         <Button
