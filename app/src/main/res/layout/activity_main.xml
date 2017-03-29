@@ -143,7 +143,7 @@
 
                     <TextView
                         style="@style/GameStats"
-                        android:text="Goals" />
+                        android:text="@string/goals" />
 
                     <TextView
                         android:id="@+id/goalsTeamB"
@@ -216,7 +216,7 @@
 
                     <TextView
                         style="@style/GameStats"
-                        android:text="Penalties" />
+                        android:text="@string/penalties" />
 
                     <TextView
                         android:id="@+id/penaltiesB"

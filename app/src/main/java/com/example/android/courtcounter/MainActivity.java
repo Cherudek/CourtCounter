@@ -11,6 +11,10 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamB = 0;
     int goalsTeamA = 0;
     int goalsTeamB = 0;
+    int penaltiesTeamA = 0;
+    int penaltiesTeamB = 0;
+    int faultsTeamA = 0;
+    int faultsTeamB = 0;
 
 
     @Override
@@ -19,20 +23,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         displayForTeamA(0);
     }
-
     /**
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
-    }
-
-    /**
-     * Displays the given score for Team A stats Window
-     */
-    public void showGoalsTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.goalsTeamA);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -43,12 +38,49 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
+    /**
+     * Displays number of Goals for Team A stats Window
+     */
+    public void showGoalsTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.goalsTeamA);
+        scoreView.setText(String.valueOf(score));
+    }
 
     /**
-     * Displays the given score for Team B Stats Window
+     * Displays number of Goals for Team B Stats Window
      */
     public void showGoalsTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.goalsTeamB);
+        scoreView.setText(String.valueOf(score));
+    }
+    /**
+     * Displays number of Penalties for Team A stats Window
+     */
+    public void showPenaltiesTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.penaltiesA);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays number of Penalties for Team B stats Window
+     */
+    public void showPenaltiesTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.penaltiesB);
+        scoreView.setText(String.valueOf(score));
+    }
+    /**
+     * Displays number of Faults for Team A stats Window
+     */
+    public void showFaultsTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.faultsA);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays number of Faults for Team B stats Window
+     */
+    public void showFaultsTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.faultsB);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -60,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
         showGoalsTeamA(scoreTeamA);
     }
-
-
     /**
      * Increase by 1 score + goals for Team B.
      */
@@ -71,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         showGoalsTeamB(scoreTeamB);
     }
     /**
-     * Decrease score + goals by 1 for Team A.
+     * Decrease by 1 score + goals for Team A.
      */
     public void minusGoalA(View view) {
         scoreTeamA = scoreTeamA - 1;
@@ -87,16 +117,90 @@ public class MainActivity extends AppCompatActivity {
         showGoalsTeamB(scoreTeamB);
     }
 
+    /**
+     * Increase penalties by 1 for Team A.
+     */
+    public void plusPenaltyA(View view) {
+        penaltiesTeamA = penaltiesTeamA + 1;
+        showPenaltiesTeamA(penaltiesTeamA);
+    }
+
+    /**
+     * Decrease penalties by 1 for Team A.
+     */
+    public void minusPenaltyA(View view) {
+        penaltiesTeamA = penaltiesTeamA - 1;
+        showPenaltiesTeamA(penaltiesTeamA);
+    }
+
+    /**
+     * Increase penalties by 1 for Team B.
+     */
+    public void plusPenaltyB(View view) {
+        penaltiesTeamB = penaltiesTeamB + 1;
+        showPenaltiesTeamB(penaltiesTeamB);
+    }
+
+    /**
+     * Decrease penalties by 1 for Team B.
+     */
+    public void minusPenaltyB(View view) {
+        penaltiesTeamB = penaltiesTeamB - 1;
+        showPenaltiesTeamB(penaltiesTeamB);
+    }
+
+    /**
+     * Increase faults by 1 for Team A.
+     */
+    public void plusFaultA(View view) {
+        faultsTeamA = faultsTeamA + 1;
+        showFaultsTeamA(faultsTeamA);
+    }
+
+    /**
+     * Decrease faults by 1 for Team A.
+     */
+    public void minusFaultA(View view) {
+        faultsTeamA = faultsTeamA - 1;
+        showFaultsTeamA(faultsTeamA);
+    }
+
+    /**
+     * Increase faults by 1 for Team B.
+     */
+    public void plusFaultB(View view) {
+        faultsTeamB = faultsTeamB + 1;
+        showFaultsTeamB(faultsTeamB);
+    }
+
+    /**
+     * Decrease faults by 1 for Team B.
+     */
+    public void minusFaultB(View view) {
+        faultsTeamB = faultsTeamB - 1;
+        showFaultsTeamB(faultsTeamB);
+    }
+
 
     public void resetScoreAB (View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
         goalsTeamA = 0;
         goalsTeamB = 0;
-        showGoalsTeamA(goalsTeamA);
-        showGoalsTeamB(goalsTeamB);
+        penaltiesTeamA = 0;
+        penaltiesTeamB = 0;
+        faultsTeamA = 0;
+        faultsTeamB = 0;
+
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
+        showGoalsTeamA(goalsTeamA);
+        showGoalsTeamB(goalsTeamB);
+        showPenaltiesTeamA(penaltiesTeamA);
+        showPenaltiesTeamB(penaltiesTeamB);
+        showFaultsTeamB(faultsTeamB);
+        showFaultsTeamA(faultsTeamA);
+
     }
 
 

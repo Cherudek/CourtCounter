@@ -7,4 +7,6 @@
     <string name="team_b">Team B</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
+    <string name="penalties">Penal</string>
+    <string name="goals">Goals</string>
 </resources>
