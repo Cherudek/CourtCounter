@@ -9,4 +9,8 @@
     <string name="plus">+</string>
     <string name="penalties">Penal</string>
     <string name="goals">Goals</string>
+    <string name="reset">Reset All</string>
+    <string name="saves">Saves</string>
+    <string name="shots">Shots</string>
+    <string name="faults">Faults</string>
 </resources>

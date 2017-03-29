@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     int penaltiesTeamB = 0;
     int faultsTeamA = 0;
     int faultsTeamB = 0;
+    int shotsTeamA = 0;
+    int shotsTeamB = 0;
+    int savesTeamA = 0;
+    int savesTeamB = 0;
 
 
     @Override
@@ -83,6 +87,40 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.faultsB);
         scoreView.setText(String.valueOf(score));
     }
+
+    /**
+     * Displays number of Shots for Team A stats Window
+     */
+    public void showShotsTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.shotsA);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays number of Shots for Team B stats Window
+     */
+    public void showShotsTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.shotsB);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays number of Shots for Team A stats Window
+     */
+    public void showSavesTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.savesA);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays number of Shots for Team B stats Window
+     */
+    public void showSavesTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.savesB);
+        scoreView.setText(String.valueOf(score));
+    }
+
+
 
     /**
      * Increase by 1 score + goals for Team A.
@@ -181,6 +219,70 @@ public class MainActivity extends AppCompatActivity {
         showFaultsTeamB(faultsTeamB);
     }
 
+    /**
+     * Increase shots by 1 for Team A.
+     */
+    public void plusShotA(View view) {
+        shotsTeamA = shotsTeamA + 1;
+        showShotsTeamA(shotsTeamA);
+    }
+
+    /**
+     * Decrease shots by 1 for Team A.
+     */
+    public void minusShotA(View view) {
+        shotsTeamA = shotsTeamA - 1;
+        showShotsTeamA(shotsTeamA);
+    }
+
+    /**
+     * Increase shots by 1 for Team B.
+     */
+    public void plusShotB(View view) {
+        shotsTeamB = shotsTeamB + 1;
+        showShotsTeamB(shotsTeamB);
+    }
+
+    /**
+     * Decrease shots by 1 for Team B.
+     */
+    public void minusShotB(View view) {
+        shotsTeamB = shotsTeamB - 1;
+        showShotsTeamB(shotsTeamB);
+    }
+
+    /**
+     * Increase saves by 1 for Team A.
+     */
+    public void plusSaveA(View view) {
+        savesTeamA = savesTeamA + 1;
+        showSavesTeamA(savesTeamA);
+    }
+
+    /**
+     * Decrease saves by 1 for Team A.
+     */
+    public void minusSaveA(View view) {
+        savesTeamA = savesTeamA - 1;
+        showSavesTeamA(savesTeamA);
+    }
+
+    /**
+     * Increase saves by 1 for Team B.
+     */
+    public void plusSaveB(View view) {
+        savesTeamB = savesTeamB + 1;
+        showSavesTeamB(savesTeamB);
+    }
+
+    /**
+     * Decrease saves by 1 for Team B.
+     */
+    public void minusSaveB(View view) {
+        savesTeamB = savesTeamB - 1;
+        showSavesTeamB(savesTeamB);
+    }
+
 
     public void resetScoreAB (View view) {
         scoreTeamA = 0;
@@ -191,6 +293,10 @@ public class MainActivity extends AppCompatActivity {
         penaltiesTeamB = 0;
         faultsTeamA = 0;
         faultsTeamB = 0;
+        shotsTeamA = 0;
+        shotsTeamB = 0;
+        savesTeamA = 0;
+        savesTeamB = 0;
 
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
@@ -200,6 +306,10 @@ public class MainActivity extends AppCompatActivity {
         showPenaltiesTeamB(penaltiesTeamB);
         showFaultsTeamB(faultsTeamB);
         showFaultsTeamA(faultsTeamA);
+        showShotsTeamA(shotsTeamA);
+        showShotsTeamB(shotsTeamB);
+        showSavesTeamA(savesTeamA);
+        showSavesTeamB(savesTeamB);
 
     }
 

@@ -290,7 +290,7 @@
 
                     <TextView
                         style="@style/GameStats"
-                        android:text="Faults" />
+                        android:text="@string/faults" />
 
                     <TextView
                         android:id="@+id/faultsB"
@@ -306,6 +306,7 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/button"
                         style="@style/PlusMinusButtonStyle"
                         android:onClick="plusFaultB"
                         android:text="@string/plus" />
@@ -365,7 +366,7 @@
 
                     <TextView
                         style="@style/GameStats"
-                        android:text="Shots" />
+                        android:text="@string/shots" />
 
                     <TextView
                         android:id="@+id/shotsB"
@@ -438,7 +439,7 @@
 
                     <TextView
                         style="@style/GameStats"
-                        android:text="Saves" />
+                        android:text="@string/saves" />
 
                     <TextView
                         android:id="@+id/savesB"
@@ -455,13 +456,13 @@
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
-                        android:onClick="plusSavesB"
+                        android:onClick="plusSaveB"
                         android:text="@string/plus" />
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
                         android:layout_height="match_parent"
-                        android:onClick="minusSavesB"
+                        android:onClick="minusSaveB"
                         android:text="@string/minus" />
 
                 </LinearLayout>
@@ -484,7 +485,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:onClick="resetScoreAB"
-                android:text="Reset" />
+                android:text="@string/reset" />
 
         </LinearLayout>
 
