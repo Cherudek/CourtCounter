@@ -7,6 +7,26 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * String variables for the onSaveInstanceState.
+     */
+
+    private static final String STATE_SCORE_TEAM_A = "stateScoreTeamA";
+    private static final String STATE_SCORE_TEAM_B = "stateScoreTeamB";
+    private static final String STATE_GOALS_TEAM_A = "stateGoalsTeamA";
+    private static final String STATE_GOALS_TEAM_B = "stateGoalsTeamB";
+    private static final String STATE_PENALTIES_TEAM_A = "statePenaltiesTeamA";
+    private static final String STATE_PENALTIES_TEAM_B = "statePenaltiesTeamB";
+    private static final String STATE_FAULTS_TEAM_A = "stateFaultsTeamA";
+    private static final String STATE_FAULTS_TEAM_B = "stateFaultsTeamB";
+    private static final String STATE_SHOTS_TEAM_A = "stateShotsTeamA";
+    private static final String STATE_SHOTS_TEAM_B = "stateShotsTeamB";
+    private static final String STATE_SAVES_TEAM_A = "stateSavesTeamA";
+    private static final String STATE_SAVES_TEAM_B = "stateSavesTeamB";
+    /**
+     * Integer variables for Statistics and Score
+     */
+
     int scoreTeamA = 0;
     int scoreTeamB = 0;
     int goalsTeamA = 0;
@@ -20,6 +40,77 @@ public class MainActivity extends AppCompatActivity {
     int savesTeamA = 0;
     int savesTeamB = 0;
 
+    // Override the onSaveInstanceState method, this will write the variables values to the Bundle
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt(STATE_SCORE_TEAM_A, scoreTeamA);
+        savedInstanceState.putInt(STATE_SCORE_TEAM_B, scoreTeamB);
+        savedInstanceState.putInt(STATE_GOALS_TEAM_A, goalsTeamA);
+        savedInstanceState.putInt(STATE_GOALS_TEAM_B, goalsTeamB);
+        savedInstanceState.putInt(STATE_PENALTIES_TEAM_A, penaltiesTeamA);
+        savedInstanceState.putInt(STATE_PENALTIES_TEAM_B, penaltiesTeamB);
+        savedInstanceState.putInt(STATE_FAULTS_TEAM_A, faultsTeamA);
+        savedInstanceState.putInt(STATE_FAULTS_TEAM_B, faultsTeamB);
+        savedInstanceState.putInt(STATE_SHOTS_TEAM_A, shotsTeamA);
+        savedInstanceState.putInt(STATE_SHOTS_TEAM_B, shotsTeamB);
+        savedInstanceState.putInt(STATE_SAVES_TEAM_A, savesTeamA);
+        savedInstanceState.putInt(STATE_SAVES_TEAM_B, savesTeamB);
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        /* Restores the Score of Team A and B */
+
+        scoreTeamA = savedInstanceState.getInt(STATE_SCORE_TEAM_A);
+        scoreTeamB = savedInstanceState.getInt(STATE_SCORE_TEAM_B);
+
+        /* Restores the Goals of Team A and B  */
+
+        goalsTeamA = savedInstanceState.getInt(STATE_GOALS_TEAM_A);
+        goalsTeamB = savedInstanceState.getInt(STATE_GOALS_TEAM_B);
+
+        /* Restores the Penalties of Team A and B  */
+
+        penaltiesTeamA = savedInstanceState.getInt(STATE_PENALTIES_TEAM_A);
+        penaltiesTeamB = savedInstanceState.getInt(STATE_PENALTIES_TEAM_B);
+
+        /* Restores the Fouls of Team A and B  */
+
+        faultsTeamA = savedInstanceState.getInt(STATE_FAULTS_TEAM_A);
+        faultsTeamB = savedInstanceState.getInt(STATE_FAULTS_TEAM_B);
+
+        /* Restores the Shots of Team A and B  */
+
+        shotsTeamA = savedInstanceState.getInt(STATE_SHOTS_TEAM_A);
+        shotsTeamB = savedInstanceState.getInt(STATE_SHOTS_TEAM_B);
+
+        /* Restores the Saves of Team A and B  */
+
+        savesTeamA = savedInstanceState.getInt(STATE_SAVES_TEAM_A);
+        savesTeamB = savedInstanceState.getInt(STATE_SAVES_TEAM_B);
+
+        /* Display values after restoring */
+
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+        showGoalsTeamA(scoreTeamA);
+        showGoalsTeamB(scoreTeamB);
+        showPenaltiesTeamA(penaltiesTeamA);
+        showPenaltiesTeamB(penaltiesTeamB);
+        showFaultsTeamA(faultsTeamA);
+        showFaultsTeamB(faultsTeamB);
+        showShotsTeamA(shotsTeamA);
+        showShotsTeamB(shotsTeamB);
+        showSavesTeamA(savesTeamA);
+        showSavesTeamB(savesTeamB);
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

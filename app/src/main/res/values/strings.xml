@@ -7,10 +7,10 @@
     <string name="team_b">Team B</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
-    <string name="penalties">Penal</string>
-    <string name="goals">Goals</string>
+    <string name="penalties">PENALTIES</string>
+    <string name="goals">GOALS</string>
     <string name="reset">Reset All</string>
-    <string name="saves">Saves</string>
-    <string name="shots">Shots</string>
-    <string name="faults">Faults</string>
+    <string name="saves">SAVES</string>
+    <string name="shots">SHOTS</string>
+    <string name="faults">FOULS</string>
 </resources>
