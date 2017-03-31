@@ -9,6 +9,8 @@
 
     </style>
 
+    <!-- Styles for Buttons + and - -->
+
     <style name="PlusMinusButtonStyle">
         <item name="android:textSize">24sp</item>
         <item name="android:layout_width">45dp</item>
@@ -20,6 +22,8 @@
 
     </style>
 
+    <!-- Statistics Style for Goals, Penalties, Fouls, Shots and Saves Layout-->
+
     <style name="GameStats">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -30,6 +34,8 @@
         <item name="android:textColor">#000000</item>
 
     </style>
+
+    <!-- Team A Name Style -->
 
     <style name="TeamA">
         <item name="android:layout_width">match_parent</item>
@@ -46,6 +52,8 @@
 
     </style>
 
+    <!-- Team B Name Style -->
+
     <style name="TeamB">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -59,6 +67,8 @@
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">#616161</item>
     </style>
+
+    <!-- Style for Score Team A and B -->
 
     <style name="teamABscore">
         <item name="android:layout_width">match_parent</item>
