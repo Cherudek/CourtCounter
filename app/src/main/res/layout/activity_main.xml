@@ -112,6 +112,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <!-- Goals Layout -->
@@ -120,19 +122,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <!-- Goals Plus and Minus Buttons Team A -->
 
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:orientation="horizontal">
-
+                <LinearLayout style="@style/StatisticsBox">
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -149,16 +145,9 @@
                 <!-- Goals Text Layout -->
 
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
                     <TextView
-
                         android:id="@+id/goalsTeamA"
                         style="@style/GameStats"
                         android:text="0" />
@@ -179,12 +168,7 @@
                 <!-- Goals Plus and Minus Buttons Team A -->
 
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
+                <LinearLayout style="@style/StatisticsBox">
 
                     <Button
                         android:id="@+id/button2"
@@ -209,15 +193,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <!-- Team A Buttons +  - -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
+
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -234,10 +216,10 @@
                 <!-- Penalties Text Team A B -->
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    style="@style/StatisticsBox"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_marginRight="-15dp">
+
 
                     <TextView
                         android:id="@+id/penaltiesA"
@@ -258,11 +240,8 @@
 
                 <!-- Team B + - buttons -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
+
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -280,23 +259,21 @@
 
             </LinearLayout>
 
-            <!-- Fauls Layout -->
+            <!-- Fouls Layout -->
 
             <LinearLayout
-
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <!-- Fouls Team A + - buttons -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
+
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -312,11 +289,7 @@
 
                 <!-- Fouls Text -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
                     <TextView
                         android:id="@+id/faultsA"
@@ -337,11 +310,8 @@
 
                 <!-- Team B Fouls + - buttons -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
+
 
                     <Button
                         android:id="@+id/button"
@@ -363,20 +333,17 @@
             <!-- Shots Layout -->
 
             <LinearLayout
-
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <!-- Team A  Shots buttons + - -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -392,10 +359,7 @@
 
                 <!-- Shots Text -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
 
                     <TextView
@@ -417,11 +381,8 @@
 
                 <!-- Team B Shots buttons + -  -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
+
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -442,19 +403,15 @@
             <!-- Saves Layout -->
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <!-- Team A Saves buttons + -  -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -470,11 +427,7 @@
 
                 <!-- Saves Text -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
                     <TextView
                         android:id="@+id/savesA"
@@ -495,11 +448,7 @@
 
                 <!-- Team B Saves + - buttons -->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/StatisticsBox">
 
                     <Button
                         style="@style/PlusMinusButtonStyle"
@@ -525,14 +474,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:orientation="vertical">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:onClick="resetScoreAB"
                 android:text="@string/reset" />
 
