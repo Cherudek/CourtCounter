@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String STATE_SHOTS_TEAM_B = "stateShotsTeamB";
     private static final String STATE_SAVES_TEAM_A = "stateSavesTeamA";
     private static final String STATE_SAVES_TEAM_B = "stateSavesTeamB";
+
     /**
      * Integer variables for Statistics and Score
      */
