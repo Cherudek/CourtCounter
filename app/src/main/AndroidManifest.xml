@@ -3,8 +3,8 @@
     package="com.example.android.courtcounter">
 
     <application
-
         android:allowBackup="true"
+        android:configChanges="orientation"
         android:icon="@drawable/football_icon"
         android:label="Football Score Counter"
         android:supportsRtl="true"
